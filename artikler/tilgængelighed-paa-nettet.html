@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Captuelt - Artikel om Tilgængelighed på nettet. Niels S. Bjerg har skrevet en artiklen om besværligheden for blinde på nettet.">
+    <meta name="author" content="Lasse Aakjær">
+    <link rel="stylesheet" href="https://use.typekit.net/noy3cum.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <title>Captuelt - Tilgængelighed på nettet</title>
+</head>
+
+<body>
+    <progress value="0" max="500"></progress>
+
+    <header>
+        <nav>
+            <a href="../">
+                <img src="../images/captuelt.svg" alt="Captuelt Logo">
+            </a>
+            <!-- https://www.w3.org/TR/wai-aria/#aria-label -->
+            <button id="nav-icon1" aria-label="closed" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- https://www.w3schools.com/css/css_dropdowns.asp -->
+            <div id="dropdown" class="dropdown" role="menu" tabindex="0" aria-label="closed">
+                <h2 aria-labelledby="dropdown">Artikler</h2>
+                <div class="dropdown-content" role="navigation" aria-label="side navigation">
+                    <ul>
+                        <li role="option"><a href="./5-handicappet-steder.html"> 5 Handicap venlige steder i
+                                Aarhus</a></li>
+                        <li role="option"><a href="./offentlig-transport-i-kørestol.html">Offentlig Transport i
+                                Kørestol</a></li>
+                        <li role="option"><a href="./tilgængelighed-paa-nettet.html">Tilgængelighed på
+                                Nettet</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="overlay">
+                <h2>Artikler</h2>
+                <p><a href="./5-handicappet-steder.html">5 Handicap venlige steder i Aarhus</a></p><br>
+                <p><a href="./offentlig-transport-i-kørestol.html">Offentlig Transport i Kørestol</a></p> <br>
+                <p><a href="./tilgængelighed-paa-nettet.html">Tilgængelighed på Nettet</a></p>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <article>
+            <h1>Tilgængelighed på Nettet</h1>
+            <p id="author">af Niels Stenslund Bjerg (22. Feb - 2019)</p>
+
+            <img src="../images/accessibility.png" alt="tilgængeligheds website illutration">
+            <div class="source">
+                <p>Billede: (juiceboxinteractive, 2018)</p>
+            </div>
+
+            <h2>Problemer med tilgængelighed</h2>
+            <p>
+                Når vi taler om tilgængelighed, på en hjemmeside, betyder det at indholdet og funktionaliteten på siden
+                er tilgængelige for alle der bruger siden. Uanset hvem der bruger den. Som udvikler af en hjemmeside, er
+                det nemt antage at alle bruger kan se og bruge et tastatur, mus eller touch screen og på samme måde
+                interagere med sidens indhold som du gør. Dette gør at oplevelsen virker godt for nogle, mens det skaber
+                små irritationer og problemer for andre. (Kearney et al., 2019)
+                Tilgængelighed henvender sig, derfor til de bruger som er uden for rækkevidde, af ”normale bruger” som
+                må bruge og interagere med ting anderledes end dig.
+                Det henvender sig, især til dem der har et handicap på den ene eller anden måde.
+            </p>
+
+            <h2>Regler på området</h2>
+            <p>
+                Der findes ikke nogen generelle regler, man skal overholde. Men arbejder man i det offentlige, gælder
+                loven om tilgængelighed af offentlige og offentligretlige organers websteder og mobilapplikationer.
+                Loven dækker over de standarder den internationale organisation W3C har udarbejdet kaldet WCAG (Web
+                Content Accessibility Guidelines). (Digitaliseringsstyrelsen, 2019)
+            </p>
+
+            <h2>Hjælpemidler på hjemmesider</h2>
+            <p>
+                Mennesker med handicap, er lige så forskellige som folk uden handicap og det er deres handicap også.
+                (MDN Web docs, 2019)
+                Mennesker med synshandicap, blinde eller farveblinde bruger skærmforstørrelsesglas. Enden fysiske eller
+                software til at hjælpe dem med at kunne se skærmen. Andre bruger skræm oplæsere til at læse teksten
+                højt.
+                Folk med dårlig hørelse eller døve bruger ”Assistive Devices”, enheder der hjælper dem med at høre eller
+                kommunikere.
+                Bevægelseshæmmede som enden har mistet læmmer eller er neurologisk hæmmede, og har mistet kontrollen
+                over deres krop, kan måske have svært ved at bruge en mus. Mens andre kan være hårdere ramt. Måske er
+                man lammet så meget, at man er nødt til at bruge en hovedpeger. (MDN Web docs, 2019)Det gør typisk at
+                man kun kan bruge tastaturet til at manøvrere websitet.
+            </p>
+
+            <h2>Brugervenlig som ARIA</h2>
+            <p>
+                Webbrowsere bruger tilgængeligheds API’s, givet af operativsystemet, der giver informationer til
+                ”assistive technologies” (ATs). ATs bruger mest de semantiske tags, som fortæller hvilke slags
+                informationer der er på siden. Disse informationer er struktureret i et informationstræ kaldet
+                accessibility tree, tilgængelighedstræet. Som den handicappet kan bruge til at navigere websitet. Nogle
+                gange er de semantiske tags ikke tilstrækkelige, så kan man supplere med WAI-ARIA specifikationer, som
+                tilføjer yderligere information til tilgængelighedstræet.
+            </p>
+
+
+
+
+            <section class="kilder">
+                <h2>Kilder</h2>
+                <p>Digitaliseringsstyrelsen, 2019. Lov om webtilgængelighed. [online] digst, Lov om webtilgængelighed.
+                    Available at:
+                    <a href="https://digst.dk/digital-service/webtilgaengelighed/lov-om-webtilgaengelighed/"
+                        target="_blank" rel="license">
+                        https://digst.dk/digital-service/ webtilgaengelighed/lov-om-webtilgaengelighed/
+                    </a>
+                    <br> [Accessed 20 Oct. 2019].</p>
+                <p>juiceboxinteractive, 2018. Website accessibility checklist: 11 essential things you need to do.
+                    [online] Juicebox Interactive. Available at:
+                    <a href="https://juiceboxinteractive.com/blog/accessibility-checklist/" target="_blank" rel="license">
+                        https://juiceboxinteractive.com/ blog/accessibility-checklist/
+                    </a>
+                    <br> [Accessed 28 Oct. 2019].</p>
+                <p>Kearney, M., Gash, D., Boxhall, A. and Dodson, Rob, 2019. Accessibility | Web Fundamentals. [online]
+                    Google Developers. Available at:
+                    <a href="https://developers.google.com/web/fundamentals/accessibility" target="_blank" rel="license">
+                        https://developers.google.com/ web/fundamentals/accessibility
+                    </a>
+                    <br> [Accessed 20 Oct. 2019].</p>
+                <p>MDN Web docs, 2019. What is accessibility? [online] developer.mozilla, What is accessibility?
+                    Available at:
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility"
+                        target="_blank" rel="license">
+                        https://developer.mozilla.org/ en-US/docs/Learn/Accessibility /What_is_accessibility
+                    </a>
+                    <br> [Accessed 20 Oct. 2019].</p>
+
+            </section>
+
+        </article>
+    </main>
+    <footer>
+        <h3>Kontakt</h3>
+        <p>Ryesgade 20</p>
+        <p>2200 København N</p>
+        <p>Danmark</p>
+
+        <h3>Redaktion</h3>
+        <p>Skriv til vores redaktion</p>
+        <p>captuelt@redaktion.com</p>
+
+        <p id="copyright">Copyright &#169; Captuelt Companie 2019 </p>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
